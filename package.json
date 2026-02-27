@@ -10,7 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@eximia/auth": "file:../packages/auth",
+    "@eximia/auth": "github:hugocapitelli/eximia-auth#main",
     "@supabase/ssr": "^0.8.0",
     "@supabase/supabase-js": "^2.93.1",
     "lucide-react": "^0.474.0",
