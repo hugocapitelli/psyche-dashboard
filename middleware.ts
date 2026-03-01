@@ -3,7 +3,7 @@ import { createAuthMiddleware } from "@eximia/auth/server";
 
 const handleAuth = createAuthMiddleware({
   publicRoutes: [],
-  authRoutes: [],
+  authRoutes: ["/login", "/auth/callback"],
   loginUrl: "/login",
   afterLoginUrl: "/",
   appId: "psyche-dashboard",
