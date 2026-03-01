@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0A0A0A;
+  --surface: #111111;
+  --elevated: #1A1A1A;
+  --border: #2A2A2A;
+  --primary: #E8E0D5;
+  --accent: #C4A882;
+  --accent-alt: #7C9E8F;
+  --muted: #666666;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0A0A0A;
+  color: #E8E0D5;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0A0A0A; }
+::-webkit-scrollbar-thumb { background: #2A2A2A; border-radius: 2px; }
+
+/* Subtle animations */
+.card-hover {
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+.card-hover:hover {
+  border-color: #3A3A3A;
+  background-color: #1A1A1A;
+}
