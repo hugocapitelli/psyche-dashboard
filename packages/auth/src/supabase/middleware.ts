@@ -122,10 +122,11 @@ export function createAuthMiddleware(userConfig?: AuthMiddlewareConfig) {
 
     if (!user && !isAuthRoute) {
       // Consumer apps: redirect to auth portal for SSO
-      if (config.appId !== "auth-portal" && config.authPortalUrl) {
+      if (config.appId !== "auth-portal") {
+        const portalBase = config.authPortalUrl || DEFAULT_CONFIG.authPortalUrl;
         const currentUrl = request.nextUrl.clone();
         const returnUrl = `${currentUrl.origin}${pathname}`;
-        const authUrl = new URL(`${config.authPortalUrl}/login`);
+        const authUrl = new URL(`${portalBase}/login`);
         authUrl.searchParams.set("redirect", returnUrl);
         return helpers.redirect(authUrl.toString());
       }

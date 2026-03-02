@@ -7,8 +7,8 @@ const handleAuth = createAuthMiddleware({
   loginUrl: "/login",
   afterLoginUrl: "/",
   appId: "psyche-dashboard",
-  cookieDomain: process.env.NEXT_PUBLIC_COOKIE_DOMAIN ?? ".eximiaventures.com.br",
-  authPortalUrl: process.env.NEXT_PUBLIC_AUTH_PORTAL_URL ?? "https://auth.eximiaventures.com.br",
+  cookieDomain: process.env.NEXT_PUBLIC_COOKIE_DOMAIN || ".eximiaventures.com.br",
+  authPortalUrl: process.env.NEXT_PUBLIC_AUTH_PORTAL_URL || "https://auth.eximiaventures.com.br",
 });
 
 export async function middleware(request: NextRequest) {
